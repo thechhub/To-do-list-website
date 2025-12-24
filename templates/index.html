@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Simple To-Do List</h1>
+
+        <!-- Add Task Form -->
+        <form action="/add" method="POST" class="add-form">
+            <input type="text" name="task" placeholder="Enter new task..." required>
+            <button type="submit">Add</button>
+        </form>
+
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li>
+                <form action="/edit/{{ task.id }}" method="POST" class="edit-form">
+                    <!-- Editable task text -->
+                    <input type="text" name="task" value="{{ task.text }}" class="task-input">
+
+                    <!-- Save Edit -->
+                    <button class="save-btn">Save</button>
+                </form>
+
+                <!-- Delete Task -->
+                <a href="/delete/{{ task.id }}" class="delete-btn">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
