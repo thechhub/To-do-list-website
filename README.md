@@ -66,5 +66,6 @@ When you add, edit, or delete tasks, the JSON file updates automatically.
 
 No database, no complications — just straightforward functionality.
 
+<img width="1600" height="800" alt="Screenshot (158)" src="https://github.com/user-attachments/assets/746d41d9-5d6e-4fc6-883a-8ecd00f8a15b" />
 
 Feel free to customise anything in it
